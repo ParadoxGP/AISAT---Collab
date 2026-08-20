@@ -1,0 +1,262 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AISAT Baliuag - Introduction</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #f4f8f6, #dceee7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #202624;
+  }
+
+  .intro {
+    width: min(900px, 92vw);
+    min-height: 620px;
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 35px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intro::before {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: #0d8469;
+    opacity: .08;
+    top: -130px;
+    left: -110px;
+  }
+
+  .intro::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #0d8469;
+    opacity: .07;
+    bottom: -150px;
+    right: -100px;
+  }
+
+  .logo-wrap {
+    width: 190px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: transparent;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    -webkit-user-select: none;
+    border: none;
+    border-radius: 0;
+  }
+
+  .logo-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+    border: none;
+    border-radius: 0;
+  }
+
+  .logo-placeholder {
+    display: none;
+  }
+
+  .eyebrow {
+    color: #0d8469;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(34px, 6vw, 58px);
+    line-height: 1.05;
+    color: #252b29;
+    position: relative;
+    z-index: 1;
+    outline: none;
+  }
+
+  .presented {
+    margin: 20px 0 34px;
+    font-size: 19px;
+    color: #59635f;
+    position: relative;
+    z-index: 1;
+    outline: none;
+  }
+
+  .presented strong {
+    color: #0d8469;
+  }
+
+  .proceed {
+    border: 0;
+    background: #0d8469;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 8px 20px rgba(13,132,105,.25);
+    transition: .2s;
+  }
+
+  .proceed:hover {
+    transform: translateY(-2px);
+    background: #096d57;
+  }
+
+  .hint {
+    margin-top: 18px;
+    color: #8a938f;
+    font-size: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .code-screen {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #111715;
+    z-index: 20;
+    padding: 25px;
+  }
+
+  .code-container {
+    width: min(1100px, 96vw);
+    height: 92vh;
+    margin: auto;
+    background: #1b2421;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 70px rgba(0,0,0,.45);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .code-top {
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    background: #25302c;
+    color: #fff;
+  }
+
+  .code-top span {
+    font-weight: 700;
+  }
+
+  .close {
+    border: 0;
+    background: #0d8469;
+    color: white;
+    padding: 9px 17px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  pre {
+    margin: 0;
+    padding: 25px;
+    overflow: auto;
+    color: #dce8e3;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    word-break: break-word;
+    flex: 1;
+  }
+
+  @media (max-width: 600px) {
+    .intro { min-height: 570px; padding: 40px 22px; }
+    .logo-wrap { width: 155px; height: 155px; }
+    .presented { font-size: 16px; }
+  }
+</style>
+<style>html,body,#root{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin:0;padding:0}html,body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Helvetica Neue,Arial,sans-serif!important}button,input,textarea,select{font-family:inherit}html{background-color:transparent}html.chatgptOled.dark,html.mobileSkybridge.dark{background-color:#000}@supports (font: -apple-system-body){html.mobileSkybridge{font:-apple-system-body}}html.desktopSkybridge.dark{background-color:#1e1e1e}html.desktopSkybridge [data-openai-titlebar]{padding-left:calc(8px + var(--openai-titlebar-left-inset, 0px));padding-right:8px}html.transparentSkybridgeBackground,html.transparentSkybridgeBackground.dark{background-color:transparent}html.androidSkybridge,html.androidSkybridge body,html.androidSkybridge *{-webkit-tap-highlight-color:rgba(255,255,255,0)}html.androidSkybridge *::selection,html.androidSkybridge *::-moz-selection{background:#fff0;color:inherit}</style></head>
+<body>
+
+<section class="intro">
+  <div class="logo-wrap" title="School logo">
+    <img id="logoPreview" src="images/aisat.png" alt="School logo">
+  </div>
+
+  <div class="eyebrow">School Presentation</div>
+
+  <h1>AISAT Baliuag</h1>
+
+  <div class="presented">
+    Presented by <strong>Aaron Paul Gesmundo</strong>
+  </div>
+
+  <button class="proceed" onclick="goToLanding()">Proceed</button>
+
+</section>
+
+<div class="code-screen" id="codeScreen">
+  <div class="code-container">
+    <div class="code-top">
+      <span>HTML / CSS / JavaScript Code</span>
+      <button class="close" onclick="hideCode()">Back</button>
+    </div>
+    <pre id="codeOutput"></pre>
+  </div>
+</div>
+
+<script>
+function goToLanding() {
+  window.location.href = "landing.html";
+}
+
+function showCode() {
+  const currentPage = document.documentElement.outerHTML;
+  document.getElementById("codeOutput").textContent = currentPage;
+  document.getElementById("codeScreen").style.display = "block";
+}
+
+function hideCode() {
+  document.getElementById("codeScreen").style.display = "none";
+}
+</script>
+
+
+
+</body></html>
