@@ -205,10 +205,32 @@
   }
 
   @media (max-width: 860px){
-    .hero, .testimonial{ grid-template-columns: 1fr; }
-    .testimonial-img{ max-width: 200px; }
+    .wrap{ padding: 0 20px; }
+    .hero{ grid-template-columns: 1fr; gap: 26px; padding-top: 92px; }
+    .testimonial{ grid-template-columns: 1fr; padding: 24px; }
+    .testimonial-img{ max-width: 200px; margin: 0 auto; }
     .feature-grid, .product-grid{ grid-template-columns: 1fr; }
-    .hero h1{ font-size: 2rem; }
+    .hero h1{ font-size: 2.2rem; }
+    .back-btn{ top: 16px; right: 16px; padding: 9px 15px; font-size: .8rem; }
+    .btn{ width: 100%; max-width: 220px; text-align: center; }
+    .card-footer{ flex-direction: column; align-items: flex-start; gap: 12px; }
+  }
+
+  @media (max-width: 480px){
+    body{ line-height: 1.5; }
+    section{ padding: 56px 0; }
+    .wrap{ padding: 0 16px; }
+    .hero{ padding-top: 82px; }
+    .hero h1{ font-size: 1.8rem; }
+    .hero p{ font-size: 0.96rem; }
+    .feature h3{ font-size: 1.05rem; }
+    .feature p{ font-size: 0.9rem; }
+    .back-btn{ top: 12px; right: 12px; padding: 8px 12px; font-size: .75rem; }
+    .btn, .btn-small{ width: 100%; max-width: 100%; }
+    .card-body{ padding: 18px; }
+    .card-specs li{ font-size: 0.88rem; }
+    .price{ font-size: 1.15rem; }
+    footer{ padding-bottom: 42px; }
   }
 </style>
 </head>
